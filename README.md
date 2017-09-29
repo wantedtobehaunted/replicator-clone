@@ -1,2 +1,2 @@
 # minecraft-replicator
-Self-replicating machine in Minecraft using ComputerCraft
+All credit to the original source creator, jnordberg, editing for personal use
