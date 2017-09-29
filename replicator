@@ -13,7 +13,7 @@
   `-------------------------------------------- ]]
 
 
-if redstone then
+if redstone and not require then
   function require(lib) shell.run(lib .. '.lua') end
 end
 
