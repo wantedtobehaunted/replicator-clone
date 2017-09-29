@@ -1,2 +1,2 @@
-# replicator-clone
--All credit to jnordberg, editing for personal use-
+# minecraft-replicator
+Self-replicating machine in Minecraft using ComputerCraft
