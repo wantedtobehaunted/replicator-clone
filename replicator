@@ -1477,7 +1477,7 @@ function Replicator:loop()
     return
   end
 
-  if not self.state.have_floppy then
+  if not self.state.have_floppy and self.state.have_disk_drive then
     local floppyMaterials = {{'redstone', 1}, {'reeds', 3}}
     if self:haveMaterials(floppyMaterials) then
       self:prepareMaterials(floppyMaterials)
