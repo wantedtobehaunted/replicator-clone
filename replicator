@@ -1257,7 +1257,7 @@ function Replicator:buildFloppy()
   self:craft(Recipes.paper, 1, false)
   self:craft(Recipes.floppyDisk, 1, false)
   self:exec [[ Y2 E ]]
-  self:drop('ComputerCraft:disk', 1)
+  self:drop('computercraft:disk', 1)
   self:setupFloppy('front')
   self.state.have_floppy = true
   self:writeState()
