@@ -1247,7 +1247,7 @@ function Replicator:buildDiskDrive()
   self:smelt({'cobblestone', 7}, {'coal', 1})
   self:exec [[ Y2 ]]
   self:craft(Recipes.diskDrive, 1, false)
-  self:exec [[ Y2 E !computercraft:peripheral P Y0 ]]
+  self:exec [[ Y2 E !computercraft:CC-Peripheral P Y0 ]]
   self.state.have_disk_drive = true
   self:writeState()
 end
@@ -1365,7 +1365,7 @@ function Replicator:loop()
     if haveParent then
       -- Figure out bearing since turtles are placed differently
       -- depending on the world orientation of the parent.
-      while not self:detect('computercraft:peripheral') do
+      while not self:detect('computercraft:CC-Peripheral') do
         self:turn('left')
       end
 
