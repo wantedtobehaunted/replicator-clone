@@ -1507,7 +1507,7 @@ function Replicator:loop()
     self:prepareMaterials(computerMaterials)
     self:smelt({'cobblestone', 7}, 'coal')
     self:craft(Recipes.computer)
-    self:store('ComputerCraft:CC-Computer')
+    self:store('computercraft:CC-Computer')
     return
   end
 
