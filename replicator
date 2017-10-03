@@ -70,7 +70,7 @@ local inventoryMaterials = Materials.fromTable {
 
 local storageMaterials = Materials.fromTable {
   {'redstone', 64 * 3}, {'sand', 64 * 2}, 'log', 'iron_ore', 'diamond',
-  'reeds', 'sapling', 'glass_pane', 'iron_ingot', 'ComputerCraft:CC-Computer',
+  'reeds', 'sapling', 'glass_pane', 'iron_ingot', 'computercraft:CC-Computer',
   'bucket', 'water_bucket', 'diamond_pickaxe', 'crafting_table'
 }
 
@@ -1503,7 +1503,7 @@ function Replicator:loop()
   end
 
   local computerMaterials = {{'cobblestone', 7}, 'redstone', 'glass_pane', 'coal'}
-  if self:haveMaterials(computerMaterials) and self.storage:count('ComputerCraft:CC-Computer') < 1 then
+  if self:haveMaterials(computerMaterials) and self.storage:count('computercraft:CC-Computer') < 1 then
     self:prepareMaterials(computerMaterials)
     self:smelt({'cobblestone', 7}, 'coal')
     self:craft(Recipes.computer)
@@ -1512,14 +1512,14 @@ function Replicator:loop()
   end
 
   if self.state.have_baby == false then
-    local turtleMaterials = {'ComputerCraft:CC-Computer', {'log', 2}, {'iron_ingot', 7}}
+    local turtleMaterials = {'computercraft:CC-Computer', {'log', 2}, {'iron_ingot', 7}}
     if self:haveMaterials(turtleMaterials) then
       self:prepareMaterials(turtleMaterials)
       self:move('y', 2)
       self:craft(Recipes.planks, 2, false)
       self:craft(Recipes.chest, 1, false)
       self:craft(Recipes.turtle, 1, false)
-      self:exec [[ Y1 E !ComputerCraft:CC-Turtle P ]]
+      self:exec [[ Y1 E !computercraft:CC-Turtle P ]]
       self:move(startingPosition)
       self.state.have_baby = true
       self.state.num_babies = self.state.num_babies + 1
